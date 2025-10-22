@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+    --Font-size: 16px;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Purple-100);
+    position: relative;
+}
+
+/* i think that using selectors like that takes a lot of time */
+.background img[id='desktopImg'] {
+    width: 100%;
+}
+
+/* styling the container of the questions */
+
+.questionsContainer {
+    width: 500px;
+    background-color: var(--White);
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.HeaderAndLogo {
+    width: 180px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.HeaderAndLogo h1 {
+    font-size: 40px;
+    color: var(--Purple-950);
+}
+
+.HeaderAndLogo img {
+    width: 30px;
+}
+
+/* styling the answer and questions div */
+.questionAndAnswer {
+    padding: 10px 0 10px 20px;
+    position: relative;
+}
+
+.questionAndAnswer h2 {
+    font-size: 18px;
+    padding: 15px 0;
+    color: var(--Purple-950);
+}
+
+.questionAndAnswer p {
+    font-size: 16px;
+    color: var(--Purple-600);
+}
+
+
+
+.questionAndAnswer img {
+    width: 23px;
+    position: absolute;
+    top: 29px;
+    right: 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:450px) {
+    .background .questionsContainer {
+        width: 400px;
+    }
+
+    .questionAndAnswer h2 {
+        width: 300px;
+    }
+
+    .questionAndAnswer img {
+        width: 35px;
+    }
+}
